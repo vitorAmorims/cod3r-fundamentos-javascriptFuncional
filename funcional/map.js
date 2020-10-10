@@ -24,3 +24,4 @@ const allNames = students
 .map(el => el + ', bom dia!') //aqui estou concatendo os nomes, com saudação de bom dia
 .map(el => el.toLocaleUpperCase()); //inserindo método toLocalUppercase 
 console.log(allNames);
+
