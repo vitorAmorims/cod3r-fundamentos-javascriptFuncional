@@ -26,3 +26,14 @@ const valoresConsolidados = carrinho.map(produto => produto.quantidade * produto
 const getProdutosXPrecos = produto => produto.quantidade * produto.preco;
 const valoresConsolidados1 = carrinho.map(getProdutosXPrecos);
 console.log(valoresConsolidados1);
+
+
+Array.prototype.meuMap = function(fn) {
+    let result = [];
+    for (let i = 0; i < this.length; i++) {
+        result.push(fn(this[i], i, this));
+    }
+    return result;
+}
+const numeros = [1,2,3,4,5,6,7,8,9,10];
+console.log(numeros.meuMap((element) => element * 2));
