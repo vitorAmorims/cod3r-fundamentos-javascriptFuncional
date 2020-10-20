@@ -21,4 +21,12 @@ console.log(typeof p) //output object
 // })
 
 //Arrow function
-p.then(valor => console.log(valor));
+// p.then(valor => console.log(valor));
+
+//vantagens .then que você chamar ele quantas vezes quiser
+p   
+.then(valor => console.log(valor));
+// .then()
+// .then()
+// .then()
+
