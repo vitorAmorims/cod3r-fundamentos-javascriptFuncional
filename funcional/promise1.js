@@ -23,9 +23,14 @@ console.log(typeof p) //output object
 //Arrow function
 // p.then(valor => console.log(valor));
 
-//vantagens .then que você chamar ele quantas vezes quiser
+//vantagens .then que você chamar ele quantas vezes quiser, compondo funções uma atrás da outra
+
+function todosElementos(array) {
+    return console.log(array)
+}
+
 p   
-.then(valor => console.log(valor));
+.then(todosElementos); // posso substituir a fn anônima/function declaration
 // .then()
 // .then()
 // .then()
