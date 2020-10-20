@@ -29,9 +29,21 @@ function todosElementos(array) {
     return console.log(array)
 }
 
-p   
-.then(todosElementos); // posso substituir a fn anônima/function declaration
-// .then()
-// .then()
-// .then()
+function primeiroElemento(array) {
+    return console.log(array[0]);
+}
+
+function primeiraLetra(string) {
+    return string[0]
+}
+
+function transformarParaMinuscula(letra) {
+    return letra.toLowerCase();
+}
+
+p
+.then(valor => valor)   
+.then(primeiroElemento => primeiroElemento[0])
+.then(primeiraLetra => primeiraLetra[0])
+.then(transformarParaMinuscula => console.log(transformarParaMinuscula.toLowerCase()));
 
