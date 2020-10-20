@@ -27,3 +27,4 @@ const totalGeral = carrinho
 .map(getPrices)
 .reduce(getSum, 0);
 console.log(totalGeral);
+
