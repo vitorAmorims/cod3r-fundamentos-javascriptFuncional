@@ -7,11 +7,13 @@ function geradorDeNumeros(min,max) {
         resolve(aleatorio);
     });
 }
-let numeros = [];
+
+
+function numeroX10(valor) {
+    return valor * 10;
+}
 
 geradorDeNumeros(10,20)
-.then((valor) => console.log(valor))
-.then(function(valor) {
-    numeros.push(valor)
-})
-
+.then(numeroX10)
+.then(numeroX10 => `O número gerado foi ${numeroX10}`)
+.then(console.log);
