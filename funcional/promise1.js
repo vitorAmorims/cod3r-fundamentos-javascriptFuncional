@@ -1,10 +1,14 @@
-// promise vantagens compor melhor várias chamadas
-
+// promise vantagens compor melhor várias chamadas "aninhamentos"
 // promise é uma promessa, que vai se resolver no futuro.
+
+// promise gera um único valor
 
 let p = new Promise(function(cumprirPromessa) { //Promise possui function como param, e está function possui outra fuction de param.
 // Nota: cumprirPromessa é uma função que vai retornar, o que me interessa.
-    cumprirPromessa(3)
+    cumprirPromessa({  //aqui estou retornando um objeto
+        x: 3,
+        y: 4
+    })
 });
 
 console.log(typeof Promise); //output function
