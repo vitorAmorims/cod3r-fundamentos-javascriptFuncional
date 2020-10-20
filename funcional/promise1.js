@@ -30,7 +30,7 @@ function todosElementos(array) {
 }
 
 function primeiroElemento(array) {
-    return console.log(array[0]);
+    return array[0];
 }
 
 function primeiraLetra(string) {
@@ -42,8 +42,8 @@ function transformarParaMinuscula(letra) {
 }
 
 p
-.then(valor => valor)   
-.then(primeiroElemento => primeiroElemento[0])
-.then(primeiraLetra => primeiraLetra[0])
-.then(transformarParaMinuscula => console.log(transformarParaMinuscula.toLowerCase()));
+.then(primeiroElemento)
+.then(primeiraLetra)
+.then(transformarParaMinuscula)
+.then(transformarParaMinuscula => console.log(transformarParaMinuscula));
 
