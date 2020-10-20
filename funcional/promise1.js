@@ -20,7 +20,7 @@ console.log(typeof p) //output object
 // quando a promise estiver cumprida, posso acessar o valor
 
 p.then(function(valor) { // método .then, precisa de uma function com valor de parâmetro. 
-    console.log(valor);
+    console.log(valor.y); //acessando value do objeto.
 })
 
 
