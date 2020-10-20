@@ -25,25 +25,17 @@ console.log(typeof p) //output object
 
 //vantagens .then que você chamar ele quantas vezes quiser, compondo funções uma atrás da outra
 
-function todosElementos(array) {
-    return console.log(array)
-}
+const todosElementos = array => array;
 
-function primeiroElemento(array) {
-    return array[0];
-}
+const primeiroElemento = array => array[0];
 
-function primeiraLetra(string) {
-    return string[0]
-}
+const primeiraLetra = string => string[0];
 
-function transformarParaMinuscula(letra) {
-    return letra.toLowerCase();
-}
+const transformarParaMinuscula = letra => letra.toLowerCase();
 
 p
 .then(primeiroElemento)
 .then(primeiraLetra)
 .then(transformarParaMinuscula)
-.then(transformarParaMinuscula => console.log(transformarParaMinuscula));
+.then(console.log); //posso user apenas console.log
 
