@@ -5,10 +5,7 @@
 
 let p = new Promise(function(cumprirPromessa) { //Promise possui function como param, e está function possui outra fuction de param.
 // Nota: cumprirPromessa é uma função que vai retornar, o que me interessa.
-    cumprirPromessa({  //aqui estou retornando um objeto
-        x: 3,
-        y: 4
-    })
+    cumprirPromessa(["Lucas","Vitor","Neusa","Rubens","Silvia"]) //array
 });
 
 console.log(typeof Promise); //output function
@@ -20,7 +17,6 @@ console.log(typeof p) //output object
 // quando a promise estiver cumprida, posso acessar o valor
 
 p.then(function(valor) { // método .then, precisa de uma function com valor de parâmetro. 
-    console.log(Object.keys(valor)); //acessando propriedades do objeto.
+    console.log(valor); //output array completo. 
 })
-
 
