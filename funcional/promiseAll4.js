@@ -14,10 +14,11 @@ function geradorDeNumeros(min,max,tempo) {
 function gerarMatriz() {
     console.log("Aguarde o retorno de Promise!")
     const meuArray = Promise.all([ //promise.all - consigo chamar a função de interese.
-        geradorDeNumeros(1,60,5000), 
-        geradorDeNumeros(1,60,1000),
-        geradorDeNumeros(1,60,500) //somente traz o resultado quando a Promise, estiver cumprida.
-    ])
+        // posso trabalhar está variável, para obter aquilo que me interessa!
+        geradorDeNumeros(1,60,5000), // paralelismo 
+        geradorDeNumeros(1,60,1000), // posso pegar os dados de cliente
+        geradorDeNumeros(1,60,500)  // pegar os dados de fornecedor ou produto
+    ]) 
     return meuArray;
 }
 // console.log(gerarMatriz()); output pending
