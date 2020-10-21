@@ -13,15 +13,20 @@ function geradorDeNumeros(min,max,tempo) {
 
 function gerarMatriz() {
     console.log("Aguarde o retorno de Promise!")
-    const meuArray = Promise.all([ //promise.all - consigo chamar a função de interese.
-        // posso trabalhar está variável, para obter aquilo que me interessa!
-        geradorDeNumeros(1,60,5000), // paralelismo 
-        geradorDeNumeros(1,60,1000), // posso pegar os dados de cliente
-        geradorDeNumeros(1,60,500)  // pegar os dados de fornecedor ou produto
+    const meuArray = Promise.all([ // pode-se agrupar as informações em única constante ou variável. 
+        geradorDeNumeros(1,60,5000), //ex: aqui trouxe informações de clientes  
+        geradorDeNumeros(1,60,1000), //ex: aqui trouxe informações de produtos 
+        geradorDeNumeros(1,60,500)  
     ]) 
     return meuArray;
 }
 // console.log(gerarMatriz()); output pending
 
-gerarMatriz().then(console.log);
+gerarMatriz().then(console.log); // ex: Para acessar dados de cliente, usariamos dados.cliente. 
+gerarMatriz().then(console.log); // ex: Para acessar dados de produto, usariamos dados.produto.
+
+// ou
+
+gerarMatriz().then(console.log); // podemos usar única then para acessar as informações. 
+
 
