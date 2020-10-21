@@ -20,9 +20,21 @@ function gerarMatriz() {
     ]) 
     return meuArray;
 }
-// console.log(gerarMatriz()); output pending
+// let numeros = [1,2,3,4,5,6];
+function numerosPares(array) {
+    let result = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {
+            result.push(array[i]);
+        }
+    }
+    return result;
+}
+// console.log(numerosPares(numeros));
+
 console.time("promise")
 gerarMatriz()
+.then(numerosPares)
 .then(console.log)
 .then(() => {
     console.timeEnd('promise');
