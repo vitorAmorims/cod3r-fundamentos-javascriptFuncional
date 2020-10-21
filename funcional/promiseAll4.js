@@ -21,12 +21,9 @@ function gerarMatriz() {
     return meuArray;
 }
 // console.log(gerarMatriz()); output pending
-
-gerarMatriz().then(console.log); // ex: Para acessar dados de cliente, usariamos dados.cliente. 
-gerarMatriz().then(console.log); // ex: Para acessar dados de produto, usariamos dados.produto.
-
-// ou
-
-gerarMatriz().then(console.log); // podemos usar única then para acessar as informações. 
-
-
+console.time("promise")
+gerarMatriz()
+.then(console.log)
+.then(() => {
+    console.timeEnd('promise');
+});
