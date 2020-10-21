@@ -11,6 +11,9 @@ function funcionarOunao(valor, chanceErro, tempo) {
     })
 }
 funcionarOunao("testando...", 0.5, 4000)
-.then(console.log)
-.catch(error => console.log(`Erro: ${error}`));
-// Nota: depois do cath, não tenho mais dados...
+.then(value => `Valor: ${value}`)
+.then(
+    v => consol.log(v), 
+err => console.log(`Erro Esp: ${err}`) //neste caso, estou incluindo um tratamento antes do método cath. Consigo, saber em qual then aconteceu o erro!
+)
+.catch(err => console.log(`Erro: ${err}`));
