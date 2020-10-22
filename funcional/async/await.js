@@ -47,12 +47,11 @@ function retornarValor(numero) {
 
 //exemplo2
 async function retornarValorRapido() {
-    return 20 //aqui estou retornando uma promise para uma função assincrona
+    return 20
 }
-console.log(retornarValorRapido())
 
-function executar() {
+async function executar() {
     let result  = await retornarValorRapido()
     console.log(result);
 }
-executar() //ao executar a função, erro: await is only valid async function.
+executar()
