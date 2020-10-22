@@ -22,12 +22,19 @@ function esperarPor(tempo = 3000) {
 A idéia principal, de async/await é código parece sincrono, mas o código é assíncrono.
 */
 
+function retornarValor(numero) { 
+    return new Promise(resolve => {
+        setTimeout(() => resolve(numero),5000) //resolve vai assumir o númemro passado como parâmetro.
+    })
+} 
+
 async function executar() {
-    await esperarPor(1500) // com await, o output somente será impresso quando houver o retorno da promise
-    console.log("async/await 1...")
+    let valor = await retornarValor(100) // atribuindo o resulta da Promise para variável valor
     await esperarPor(1500)
-    console.log("async/await 2...")
+    console.log(`async/await ${valor}`)
     await esperarPor(1500)
-    console.log("async/await 3...")
+    console.log(`async/await ${valor + 1}`)
+    await esperarPor(1500)
+    console.log(`async/await ${valor + 2}`)
 }
 executar(); 
