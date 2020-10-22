@@ -28,19 +28,29 @@ function retornarValor(numero) {
     })
 } 
 
-async function executar() {
-    let valor = await retornarValor(100)
-    await esperarPor(1500)
-    console.log(`async/await ${valor}`)
-    await esperarPor(1500)
-    console.log(`async/await ${valor + 1}`)
-    await esperarPor(1500)
-    console.log(`async/await ${valor + 2}`)
-    return valor + 3 
-}
+// async function executar() {
+//     let valor = await retornarValor(100)
+//     await esperarPor(1500)
+//     console.log(`async/await ${valor}`)
+//     await esperarPor(1500)
+//     console.log(`async/await ${valor + 1}`)
+//     await esperarPor(1500)
+//     console.log(`async/await ${valor + 2}`)
+//     return valor + 3 
+// }
 // console.log(executar()); ao return valor + 3 na função executar, não houve o retorno do valor esperado. 
 
 // let v = executar()
 // console.log(v); output pending
 
-executar().then(console.log); // output esperado 103
+// executar().then(console.log); // output esperado 103
+
+//exemplo2
+async function retornarValorRapido() {
+    return 20
+}
+
+function executar() {
+    console.log(retornarValorRapido());
+}
+executar();
