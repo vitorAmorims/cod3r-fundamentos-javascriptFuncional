@@ -51,6 +51,6 @@ async function retornarValorRapido() {
 }
 
 function executar() {
-    console.log(retornarValorRapido());
+    return retornarValorRapido();
 }
-executar();
+executar().then(console.log);
