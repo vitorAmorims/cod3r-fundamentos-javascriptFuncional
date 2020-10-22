@@ -23,11 +23,11 @@ A idéia principal, de async/await é código parece sincrono, mas o código é 
 */
 
 async function executar() {
-    esperarPor(1500)
+    await esperarPor(1500) // com await, o output somente será impresso quando houver o retorno da promise
     console.log("async/await 1...")
-    esperarPor(1500)
+    await esperarPor(1500)
     console.log("async/await 2...")
-    esperarPor(1500)
+    await esperarPor(1500)
     console.log("async/await 3...")
 }
-executar(); // neste exemplo acima, os console.log são sincronos e apareceram antes do retorno da função esperarPor()
+executar(); 
